@@ -287,9 +287,9 @@ const productsData = [
     description:
       "High capacity power bank with fast charging and dual USB ports.",
     images: [
-      "https://images.unsplash.com/photo-1609592810793-abeb6c64b5c6?w=500&h=500&fit=crop",
-      "https://images.unsplash.com/photo-1609592810793-abeb6c64b5c6?w=500&h=500&fit=crop",
-      "https://images.unsplash.com/photo-1609592810793-abeb6c64b5c6?w=500&h=500&fit=crop",
+      "https://2b.com.eg/media/catalog/product/cache/661473ab953cdcdf4c3b607144109b90/m/p/mp330-min.jpg",
+      "https://r2media.horizondm.com/catalog/product/cache/0918f55aacda4c1ef9fc64cfdb7fd758/_/-/_-_2025-02-22t154008.838.jpg",
+      "https://http2.mlstatic.com/D_NQ_NP_916447-MLA91047358056_092025-O.webp",
     ],
     category: "electronics",
     inStock: true,
@@ -301,9 +301,9 @@ const productsData = [
     description:
       "Lightweight earbuds with noise-isolating design and long battery life.",
     images: [
-      "https://images.unsplash.com/photo-1590658165737-15a047b8b5e8?w=500&h=500&fit=crop",
-      "https://images.unsplash.com/photo-1590658165737-15a047b8b5e8?w=500&h=500&fit=crop",
-      "https://images.unsplash.com/photo-1590658165737-15a047b8b5e8?w=500&h=500&fit=crop",
+      "https://shop.orange.eg/content/images/thumbs/0008387_anker-earbuds-soundcore-life-p3.jpeg",
+      "https://hips.hearstapps.com/vader-prod.s3.amazonaws.com/1628003249-soundcore-life-p3-1628003228.jpg?crop=1xw:1xh;center,top&resize=980:*",
+      "https://www.raneen.com/media/catalog/product/n/7/n70084670v_ouj1xciyhzm6ebax_1_1.jpg?optimize=high&bg-color=255,255,255&fit=bounds&height=700&width=700&canvas=700:700",
     ],
     category: "electronics",
     inStock: true,
@@ -315,9 +315,9 @@ const productsData = [
     description:
       "High-quality condenser microphone for recording and streaming.",
     images: [
-      "https://images.unsplash.com/photo-1598440947619-2d35e9ac6c5e?w=500&h=500&fit=crop",
-      "https://images.unsplash.com/photo-1598440947619-2d35e9ac6c5e?w=500&h=500&fit=crop",
-      "https://images.unsplash.com/photo-1598440947619-2d35e9ac6c5e?w=500&h=500&fit=crop",
+      "https://m.media-amazon.com/images/I/51Tq6DteS5L._AC_SL1000_.jpg",
+      "https://m.media-amazon.com/images/I/61rZuWkHu6S._AC_UF1000,1000_QL80_.jpg",
+      "https://static.bhphoto.com/images/rich_content/desktop/IMG_1922847.jpg",
     ],
     category: "electronics",
     inStock: true,
