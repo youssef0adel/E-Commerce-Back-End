@@ -640,33 +640,28 @@ const usersData = [
 
 const seedDatabase = async () => {
   try {
-    // Connect to MongoDB
     await mongoose.connect(
       process.env.MONGODB_URI || "mongodb://localhost:27017/ecommerce"
     );
     console.log("Connected to MongoDB");
 
-    // Clear existing data
     await User.deleteMany({});
     await Category.deleteMany({});
     await Product.deleteMany({});
     console.log("Cleared existing data");
 
-    // Create categories and store their IDs
     const categories = await Category.insertMany(categoriesData);
     console.log("Created categories");
 
-    // Create a map of category slugs to IDs
     const categoryMap = {};
     categories.forEach((category) => {
       categoryMap[category.slug] = category._id;
     });
 
-    // Assign categories to products based on category field in product data
     const productsWithCategories = productsData.map((product) => {
       return {
         ...product,
-        category: categoryMap[product.category], // Use the category slug from product data
+        category: categoryMap[product.category],
         slug: product.title
           .toLowerCase()
           .replace(/ /g, "-")
@@ -674,18 +669,27 @@ const seedDatabase = async () => {
       };
     });
 
-    // Create products
     await Product.insertMany(productsWithCategories);
     console.log("Created products");
 
-    // Create users
-    await User.insertMany(usersData);
-    console.log("Created users");
+  
+    const usersWithHashedPasswords = await Promise.all(
+      usersData.map(async (user) => {
+        const hashedPassword = await bcrypt.hash(user.password, 12);
+        return {
+          ...user,
+          password: hashedPassword
+        };
+      })
+    );
+
+    await User.insertMany(usersWithHashedPasswords);
+    console.log("Created users with hashed passwords");
 
     console.log("Database seeded successfully!");
     console.log(`Created ${categories.length} categories`);
     console.log(`Created ${productsWithCategories.length} products`);
-    console.log(`Created ${usersData.length} users`);
+    console.log(`Created ${usersWithHashedPasswords.length} users`);
 
     process.exit(0);
   } catch (error) {
